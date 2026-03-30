@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm6dv2ufen6ni"]
+
+[ext_resource type="Script" path="res://Scripts/study_timer_label.gd" id="1_l76j0"]
+[ext_resource type="Script" path="res://Scripts/take_break_button.gd" id="2_kl2ew"]
+
+[node name="StudyScreen" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 576.0
+offset_bottom = 1248.0
+
+[node name="Timer" type="Node2D" parent="."]
+
+[node name="StudyTimer" type="Timer" parent="Timer"]
+wait_time = 1501.0
+one_shot = true
+autostart = true
+
+[node name="StudyTimerLabel" type="Label" parent="Timer"]
+offset_left = 138.0
+offset_top = 450.0
+offset_right = 438.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+script = ExtResource("1_l76j0")
+
+[node name="TakeBreakButton" type="Button" parent="."]
+offset_left = 58.0
+offset_top = 1260.0
+offset_right = 518.0
+offset_bottom = 1370.0
+theme_override_font_sizes/font_size = 65
+text = "Take a Break!"
+script = ExtResource("2_kl2ew")
+
+[connection signal="pressed" from="TakeBreakButton" to="TakeBreakButton" method="_on_pressed"]
