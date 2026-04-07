@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 	if $"../StudyTimer".time_left == 0 and !$"../StudyTimer".autostart:  # check autostart so this only runs once
 		$"../StudyTimer".autostart = true  # change autostart simply to only run this tween code once
 		var tween : Tween = create_tween()
-		var target_pos : Vector2 = Vector2(58, 830)
+		var target_pos : Vector2 = Vector2(730, 830)
 		
 		tween.tween_property($"../../TakeBreakButton", "position", target_pos, 0.7).set_trans(Tween.TRANS_QUART)
 		return

@@ -11,8 +11,8 @@ var score = 0
 var game_over = false
 
 var fruit_spawn_height = 250
-var left_barrier = 55
-var right_barrier = 525
+var left_barrier = 735
+var right_barrier = 1185
 
 var new_fruit_load_time : float = 0.5
 

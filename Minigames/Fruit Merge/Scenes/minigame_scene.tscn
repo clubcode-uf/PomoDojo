@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ckklurtco8qqb"]
 
-[ext_resource type="Script" path="res://Minigames/Fruit Merge/Scripts/fruit_merge_game.gd" id="1_af7c1"]
+[ext_resource type="Script" uid="uid://51mxpuva55rl" path="res://Minigames/Fruit Merge/Scripts/fruit_merge_game.gd" id="1_af7c1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtbpb"]
 size = Vector2(500, 50)
@@ -20,20 +20,20 @@ script = ExtResource("1_af7c1")
 [node name="Background" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
-offset_left = 38.0
-offset_top = 150.0
-offset_right = 538.0
-offset_bottom = 1150.0
+offset_left = 60.0
+offset_top = 160.0
+offset_right = 1860.0
+offset_bottom = 1010.0
 color = Color(0.91, 0.85995, 0.6097, 1)
 
 [node name="Box" type="Node2D" parent="."]
-position = Vector2(15, 45)
+position = Vector2(685, 0)
 scale = Vector2(0.95, 0.95)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Box"]
 
 [node name="Floor" type="CollisionShape2D" parent="Box/StaticBody2D"]
-position = Vector2(288, 1000)
+position = Vector2(288, 1000.00006)
 shape = SubResource("RectangleShape2D_xtbpb")
 
 [node name="ColorRect" type="ColorRect" parent="Box/StaticBody2D/Floor"]
@@ -86,7 +86,7 @@ polygon = PackedVector2Array(121, 341, 38, 400, 38, 971, 122, 911)
 
 [node name="Polygon2D3" type="Polygon2D" parent="Box/BoxDetails"]
 color = Color(0.92, 0.77832, 0.5152, 1)
-polygon = PackedVector2Array(124, 341, 452, 341, 453, 911, 124, 911)
+polygon = PackedVector2Array(124, 341, 288.42834, 341, 452, 341, 453, 911, 124, 911)
 
 [node name="Polygon2D4" type="Polygon2D" parent="Box/BoxDetails"]
 color = Color(0.73, 0.609915, 0.3869, 1)
@@ -95,7 +95,7 @@ polygon = PackedVector2Array(37, 975, 122, 914, 454, 913, 539, 975)
 [node name="Line2D2" type="Line2D" parent="Box/BoxDetails"]
 position = Vector2(0, -573)
 scale = Vector2(1, 0.996269)
-points = PackedVector2Array(35.15, 978.3, 121, 916, 455, 916, 540.85, 978.3)
+points = PackedVector2Array(35.15, 978.3, 121, 916, 230.96643, 915.99994, 455, 916, 540.85, 978.3)
 width = 4.0
 default_color = Color(0, 0, 0, 1)
 
@@ -112,7 +112,7 @@ width = 4.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Line2D4" type="Line2D" parent="Box/BoxDetails"]
-points = PackedVector2Array(122.4, 340, 122.4, 912)
+points = PackedVector2Array(122.4, 340, 122.400024, 381.20074, 122.4, 912)
 width = 4.0
 default_color = Color(0, 0, 0, 1)
 
@@ -121,27 +121,28 @@ points = PackedVector2Array(453.6, 340, 453.6, 912)
 width = 4.0
 default_color = Color(0, 0, 0, 1)
 
-[node name="DeathPlanes" type="Node2D" parent="."]
-position = Vector2(0, -550)
+[node name="DeathPlanes" type="Node2D" parent="Box"]
+position = Vector2(-15.7894745, -626.3158)
+scale = Vector2(1.0526316, 1.0526316)
 
-[node name="Area2D" type="Area2D" parent="DeathPlanes"]
+[node name="Area2D" type="Area2D" parent="Box/DeathPlanes"]
 
-[node name="LeftDeathPlane" type="CollisionShape2D" parent="DeathPlanes/Area2D"]
+[node name="LeftDeathPlane" type="CollisionShape2D" parent="Box/DeathPlanes/Area2D"]
 position = Vector2(-280, 1000)
 rotation = 0.226893
 shape = SubResource("RectangleShape2D_5cnjk")
 
-[node name="LeftDeathPlaneWall" type="CollisionShape2D" parent="DeathPlanes/Area2D"]
+[node name="LeftDeathPlaneWall" type="CollisionShape2D" parent="Box/DeathPlanes/Area2D"]
 position = Vector2(-476, 652)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_5cnjk")
 
-[node name="RightDeathPlane" type="CollisionShape2D" parent="DeathPlanes/Area2D"]
+[node name="RightDeathPlane" type="CollisionShape2D" parent="Box/DeathPlanes/Area2D"]
 position = Vector2(856, 1000)
 rotation = -0.226893
 shape = SubResource("RectangleShape2D_5cnjk")
 
-[node name="RightDeathPlaneWall" type="CollisionShape2D" parent="DeathPlanes/Area2D"]
+[node name="RightDeathPlaneWall" type="CollisionShape2D" parent="Box/DeathPlanes/Area2D"]
 position = Vector2(1058, 650)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_5cnjk")
@@ -149,10 +150,10 @@ shape = SubResource("RectangleShape2D_5cnjk")
 [node name="ScoreContainer" type="VBoxContainer" parent="."]
 modulate = Color(0, 0, 0, 1)
 z_index = 6
-offset_left = 38.0
-offset_top = 1050.0
-offset_right = 538.0
-offset_bottom = 1192.0
+offset_left = 70.0
+offset_top = 170.0
+offset_right = 570.0
+offset_bottom = 312.0
 
 [node name="Score" type="Label" parent="ScoreContainer"]
 layout_mode = 2
@@ -162,4 +163,4 @@ text = "Score: "
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[connection signal="body_entered" from="DeathPlanes/Area2D" to="." method="_on_death_plane_entered"]
+[connection signal="body_entered" from="Box/DeathPlanes/Area2D" to="." method="_on_death_plane_entered"]

@@ -1,0 +1,8 @@
+res://Scripts/study_button.gd
+res://Scenes/study_screen.tscn
+res://Scripts/study_timer_label.gd
+res://Scenes/main_manu.tscn
+res://Scenes/break_screen.tscn
+res://Minigames/Fruit Merge/Scenes/minigame_scene.tscn
+res://Minigames/Fruit Merge/Scripts/fruit_merge_game.gd
+res://Minigames/end_screen.tscn

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cb1d0p7r652fb"]
 
-[ext_resource type="Script" path="res://Minigames/end_screen_script.gd" id="1_qe8jf"]
+[ext_resource type="Script" uid="uid://5x0negpnce07" path="res://Minigames/end_screen_script.gd" id="1_qe8jf"]
 
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_qe8jf")
@@ -9,10 +9,10 @@ script = ExtResource("1_qe8jf")
 modulate = Color(1, 1, 1, 0)
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
-offset_left = 38.0
-offset_top = 150.0
-offset_right = 538.0
-offset_bottom = 1150.0
+offset_left = 60.0
+offset_top = 160.0
+offset_right = 1860.0
+offset_bottom = 1010.0
 color = Color(0.52, 0.52, 0.52, 0.588235)
 
 [node name="Game Over Screen" type="Node2D" parent="."]
@@ -20,13 +20,13 @@ z_index = 4
 
 [node name="Loss Screen" type="Node2D" parent="Game Over Screen"]
 z_index = 1
-position = Vector2(-600, 0)
+position = Vector2(-1300, 0)
 
 [node name="ButtonsVBoxContainer" type="VBoxContainer" parent="Game Over Screen/Loss Screen"]
 z_index = 5
-offset_left = 85.0
+offset_left = 760.0
 offset_top = 800.0
-offset_right = 485.0
+offset_right = 1160.0
 offset_bottom = 958.0
 
 [node name="Keep Studying" type="Button" parent="Game Over Screen/Loss Screen/ButtonsVBoxContainer"]
@@ -42,9 +42,9 @@ theme_override_font_sizes/font_size = 50
 text = "Exit"
 
 [node name="Game Over" type="Label" parent="Game Over Screen/Loss Screen"]
-offset_left = 38.0
+offset_left = 710.0
 offset_top = 250.0
-offset_right = 538.0
+offset_right = 1210.0
 offset_bottom = 360.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 80

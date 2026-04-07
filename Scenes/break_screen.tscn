@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwl0wn8qqlx88"]
 
-[ext_resource type="Script" path="res://Scripts/break_screen.gd" id="1_6iq1d"]
-[ext_resource type="Script" path="res://Scripts/break_timer_label.gd" id="1_sc3qu"]
+[ext_resource type="Script" uid="uid://ch305eei12uk2" path="res://Scripts/break_screen.gd" id="1_6iq1d"]
+[ext_resource type="Script" uid="uid://0qhov64cq5jy" path="res://Scripts/break_timer_label.gd" id="1_sc3qu"]
 
 [node name="BreakScreen" type="Node2D"]
 script = ExtResource("1_6iq1d")
@@ -9,27 +9,27 @@ script = ExtResource("1_6iq1d")
 [node name="Background" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
-offset_right = 576.0
-offset_bottom = 1248.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="ColorRect2" type="ColorRect" parent="Background"]
-offset_left = 31.0
-offset_top = 143.0
-offset_right = 546.0
-offset_bottom = 1157.0
+offset_left = 57.0
+offset_top = 157.0
+offset_right = 1863.0
+offset_bottom = 1013.0
 color = Color(0, 0, 0, 1)
 
 [node name="BreakTimer" type="Node2D" parent="."]
 
 [node name="BreakTimer" type="Timer" parent="BreakTimer"]
-wait_time = 301.0
+wait_time = 3.0
 one_shot = true
 autostart = true
 
 [node name="BreakTimerLabel" type="Label" parent="BreakTimer"]
-offset_left = 163.0
+offset_left = 835.0
 offset_top = 25.0
-offset_right = 413.0
+offset_right = 1085.0
 offset_bottom = 121.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
